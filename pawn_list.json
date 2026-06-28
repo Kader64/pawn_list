@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "TEMP",
+    "model": null,
+    "ability": {
+      "name": "TEMP",
+      "categories": [
+        "ACTIVE_TURN"
+      ],
+      "description": "Przesuń wybranego pionka o 3 pola bez rzutu kostką.",
+      "uses": 2,
+      "cooldown": 1,
+      "activationCondition": "ENTER_FINAL_BASE"
+    }
+  }
+]
