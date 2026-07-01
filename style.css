@@ -10,7 +10,7 @@ h1 {
   padding: 20px;
 }
 
-/* GŁÓWNY KONTENER FLEX */
+/* GŁÓWNY KONTENER */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -21,54 +21,76 @@ h1 {
 
 /* KARTA */
 .card {
-  width: 250px;
+  width: 300px;
   background: #1e1e1e;
   border-radius: 12px;
   padding: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s ease;
+  border: 1px solid #2e2e2e;
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
 
-.card h2 {
-  margin: 0 0 15px 0;
-  font-size: 20px;
-  color: #4dd0e1;
+.pawn-name {
   text-align: center;
-}
-
-.ability-name {
+  font-size: 24px;
   font-weight: bold;
-  margin-top: 10px;
-  color: #ffd54f;
-  margin-bottom: 10px;
-}
-
-.categories {
-  font-size: 12px;
-  opacity: 0.8;
   margin-bottom: 8px;
 }
 
-.desc {
+.collection {
+  text-align: center;
+  color: #b0b0b0;
+  margin-bottom: 14px;
   font-size: 14px;
+}
+
+.ability-name,
+.ability-type,
+.ability-uses,
+.ability-cooldown,
+.ability-condition {
+  margin-bottom: 8px;
+}
+
+.label {
+  font-weight: bold;
+  color: #8ec5ff;
+}
+
+.ability-desc {
+  margin-top: 12px;
+  padding: 10px;
+  background: #292929;
+  border-radius: 8px;
   line-height: 1.4;
 }
 
 .meta {
-  margin-top: 10px;
-  font-size: 12px;
-  opacity: 0.8;
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.tag {
-  display: inline-block;
-  background: #333;
-  padding: 6px 9px;
-  border-radius: 6px;
-  font-size: 12px;
+.badge {
+  background: #3a3a3a;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 13px;
 }
 
+.type-active {
+  background: #0d47a1;
+}
+
+.type-passive {
+  background: #1b5e20;
+}
+
+.type-hex {
+  background: #7b1fa2;
+}

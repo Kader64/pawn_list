@@ -8,29 +8,57 @@ fetch("./pawn_list.json")
   .catch((err) => console.error("Błąd ładowania JSON:", err));
 
 function renderPieces(pieces) {
-  pieces.forEach((p) => {
+  gallery.innerHTML = "";
+
+  pieces.forEach((piece) => {
+    const ability = piece.ability;
+
     const card = document.createElement("div");
     card.className = "card";
 
-    const ability = p.ability;
-
-    const categoriesHTML = ability.categories
-      .map((c) => `<span class="tag">${c}</span>`)
-      .join("");
+    const typeClass = `type-${ability.type.toLowerCase().replace("_", "-")}`;
 
     card.innerHTML = `
-      <h2>${p.name}</h2>
+      <div class="pawn-name">${piece.name}</div>
 
-      <div class="ability-name">Ability: ${ability.name}</div>
+      <div class="collection">
+        Collection: ${piece.collection}
+      </div>
 
-      <div class="categories">${categoriesHTML}</div>
+      <div class="ability-name">
+        <span class="label">Ability:</span>
+        ${ability.name}
+      </div>
 
-      <div class="desc">${ability.description}</div>
+      <div class="ability-type">
+        <span class="label">Type:</span>
+        <span class="badge ${typeClass}">
+          ${ability.type}
+        </span>
+      </div>
+
+      <div class="ability-desc">
+        ${ability.description}
+      </div>
 
       <div class="meta">
-        ${ability.uses ? `Użycia: ${ability.uses}` : ""}
-        ${ability.cooldown ? `CD: ${ability.cooldown}` : ""}
+        ${
+          ability.uses !== undefined
+            ? `<span class="badge">Uses: ${ability.uses}</span>`
+            : ""
+        }
 
+        ${
+          ability.cooldown !== undefined
+            ? `<span class="badge">Cooldown: ${ability.cooldown}</span>`
+            : ""
+        }
+
+        ${
+          ability.activationCondition
+            ? `<span class="badge">Condition: ${ability.activationCondition}</span>`
+            : ""
+        }
       </div>
     `;
 

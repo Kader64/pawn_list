@@ -1,17 +1,55 @@
 [
   {
     "id": 1,
-    "name": "TEMP",
-    "model": null,
+    "name": "Wolf",
+    "collection": "Wild Forest",
     "ability": {
-      "name": "TEMP",
-      "categories": [
-        "ACTIVE_TURN"
-      ],
-      "description": "Przesuń wybranego pionka o 3 pola bez rzutu kostką.",
-      "uses": 2,
-      "cooldown": 1,
-      "activationCondition": "ENTER_FINAL_BASE"
+      "name": "Scent",
+      "type": "PASSIVE",
+      "description": "This pawn gains <b>+1 Movement</b> while an enemy pawn is within its line of sight.<br><br>Line of Sight: All spaces directly in front of this pawn up to the nearest allied pawn.",
+      "cooldown": "None"
+    }
+  },
+  {
+    "id": 2,
+    "name": "?",
+    "collection": "?",
+    "ability": {
+      "name": "?",
+      "type": "PASSIVE",
+      "description": "When captured by an enemy pawn, detonates capturing the attacker.",
+      "cooldown": "None"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Soul Collector",
+    "collection": "Undead Ascension",
+    "ability": {
+      "name": "Soul Harvest",
+      "type": "PASSIVE",
+      "description": "Each pawn captured on the board grants +1 Soul, up to a maximum of 3/5/7 depending on the number of players.<br><br>When fully charged, this pawn gains an additional dice roll when moving.<br><br>The Soul stack resets when this pawn is captured."
+    }
+  },
+  {
+    "id": "4",
+    "name": "Poisoner",
+    "collection": "Wild Forest",
+    "ability": {
+      "name": "Toxic Shot",
+      "type": "ACTIVE",
+      "description": "Shoots a poisoned dart at an enemy pawn anywhere on the board, inflicting Poison.<br><br><strong>Poison:</strong> After 6 turns, the poisoned pawn is captured.<br>Poison can be cured by rolling a 6 on a dice. Curing consumes the turn.",
+      "uses": "1"
+    }
+  },
+  {
+    "id": "5",
+    "name": "?",
+    "collection": "?",
+    "ability": {
+      "name": "?",
+      "type": "?",
+      "description": "?"
     }
   }
 ]
