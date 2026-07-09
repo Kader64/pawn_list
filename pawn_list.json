@@ -30,7 +30,7 @@
     }
   },
   {
-    "id": "4",
+    "id": 4,
     "name": "Poisoner",
     "collection": "?",
     "ability": {
@@ -43,7 +43,7 @@
     }
   },
   {
-    "id": "5",
+    "id": 5,
     "name": "Jester",
     "collection": "?",
     "ability": {
@@ -54,7 +54,7 @@
   },
   {
     "id": 6,
-    "name": "Prince",
+    "name": "Chivalry",
     "collection": "?",
     "ability": {
       "name": "Charge!",
@@ -64,7 +64,7 @@
       "description": "This pawn charges in a straight line directly in front of it until it hits an enemy pawn or a corner of the board.<br><br>On Enemy Hit: Captures the enemy pawn and immediately ends the charge.<br>On Corner Hit: This pawn is <b>Stunned</b> for 1 turn."
     }
   },
-{
+  {
     "id": 7,
     "name": "Wizard",
     "collection": "?",
@@ -74,11 +74,10 @@
       "limit_type": "Uses",
       "limit_value": 2,
       "description": "Target any allied pawn anywhere on the board and swap positions with it.<br><br>Using this ability consumes this pawn's movement for the turn."
-
     }
   },
   {
-    "id": "8",
+    "id": 8,
     "name": "Trapper",
     "collection": "?",
     "ability": {
@@ -89,7 +88,7 @@
       "description": "Places a hidden trap on the tile this pawn currently occupies. When an enemy pawn enters this tile, it is immediately captured, trap disappears and Trapper gets +1 Uses.<br><br>All of this pawn's active traps disappear if the Trapper is captured or enters the base."
     }
   },
-{
+  {
     "id": 9,
     "name": "Assassin",
     "collection": "?",
@@ -98,17 +97,48 @@
       "type": "ACTIVE",
       "limit_type": "Uses",
       "limit_value": 1,
-      "description": "Can be activated when Assassin is within enemy pawn's Line of Sight and within a 3-tile range.<br><br><b>Effect:</b> Teleports this pawn directly to the first empty tile behind that enemy pawn.",
-      "cooldown": "None"
+      "description": "Can be activated when Assassin is within enemy pawn's Line of Sight and within a 3-tile range.<br><br><b>Effect:</b> Teleports this pawn directly to the first empty tile behind that enemy pawn."
+    }
+  },
+{
+    "id": 10,
+    "name": "Famine",
+    "collection": "?",
+    "ability": {
+      "name": "Starvation",
+      "type": "HEX",
+      "description": "Upon successfully entering an enemy base, instantly capture half of all active enemy pawns (rounded up).<br><br> Targets are chosen starting with the enemy pawns furthest advanced along the track."
     }
   },
   {
-    "id": "10",
+    "id": 11,
+    "name": "Siren",
+    "collection": "?",
+    "ability": {
+      "name": "Call of the sea",
+      "type": "PASSIVE",
+      "description": "This pawn creates a Deep Sea 5 spaces in each direction. <br><br> If an enemy is within the Deep Sea it will automatically move towards the Siren (also backwards) on the start of its Player's turn (this does not consume said Player's turn). <br><br>If a pawn reaches Siren in that manner it gets captured."
+    }
+  },
+  {
+    "id": 12,
     "name": "?",
     "collection": "?",
     "ability": {
       "name": "?",
-      "type": "?",
+      "type": "",
+      "limit_type": "?",
+      "limit_value": "?",
+      "description": "?"
+    }
+  },
+  {
+    "id": 13,
+    "name": "?",
+    "collection": "?",
+    "ability": {
+      "name": "?",
+      "type": "",
       "limit_type": "?",
       "limit_value": "?",
       "description": "?"
