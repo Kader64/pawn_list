@@ -2,29 +2,27 @@
   {
     "id": 1,
     "name": "Wolf",
-    "collection": "Wild Forest",
+    "collection": "?",
     "ability": {
       "name": "Scent",
       "type": "PASSIVE",
-      "description": "This pawn gains <b>+1 Movement</b> while an enemy pawn is within its line of sight.<br><br>Line of Sight: All spaces directly in front of this pawn up to the nearest allied pawn.",
-      "cooldown": "None"
+      "description": "This pawn gains <b>+1 Movement</b> while an enemy pawn is within its line of sight.<br><br>Line of Sight: All spaces directly in front of this pawn up to the nearest allied pawn."
     }
   },
   {
     "id": 2,
-    "name": "?",
+    "name": "Inferno",
     "collection": "?",
     "ability": {
-      "name": "?",
+      "name": "Ethernal Flame",
       "type": "PASSIVE",
-      "description": "When captured by an enemy pawn, detonates capturing the attacker.",
-      "cooldown": "None"
+      "description": "This pawn creates a Fire Area 2 spaces around itself. If an enemy pawn within the Fire Area does not move for 3 consecutive turns, it is captured and this pawn gains <b>+1 Stack</b>.<br><br>Each Stack increases the size of the Fire Area by <b>+1 space</b>. All accumulated Stacks are lost if this pawn is captured.<br><br><b>Fire Area:</b> All spaces directly in front of and behind this pawn."
     }
   },
   {
     "id": 3,
     "name": "Soul Collector",
-    "collection": "Undead Ascension",
+    "collection": "?",
     "ability": {
       "name": "Soul Harvest",
       "type": "PASSIVE",
@@ -34,21 +32,85 @@
   {
     "id": "4",
     "name": "Poisoner",
-    "collection": "Wild Forest",
+    "collection": "?",
     "ability": {
       "name": "Toxic Shot",
       "type": "ACTIVE",
+      "limit_type": "Uses",
+      "limit_value": "1",
       "description": "Shoots a poisoned dart at an enemy pawn anywhere on the board, inflicting Poison.<br><br><strong>Poison:</strong> After 6 turns, the poisoned pawn is captured.<br>Poison can be cured by rolling a 6 on a dice. Curing consumes the turn.",
       "uses": "1"
     }
   },
   {
     "id": "5",
+    "name": "Jester",
+    "collection": "?",
+    "ability": {
+      "name": "Fool's Immunity",
+      "type": "PASSIVE",
+      "description": "This pawn is immune to all negative effects. <br><br> This pawn cannot capture enemy pawns."
+    }
+  },
+  {
+    "id": 6,
+    "name": "Prince",
+    "collection": "?",
+    "ability": {
+      "name": "Charge!",
+      "type": "ACTIVE_TURN",
+      "limit_type": "Uses",
+      "limit_value": 1,
+      "description": "This pawn charges in a straight line directly in front of it until it hits an enemy pawn or a corner of the board.<br><br>On Enemy Hit: Captures the enemy pawn and immediately ends the charge.<br>On Corner Hit: This pawn is <b>Stunned</b> for 1 turn."
+    }
+  },
+{
+    "id": 7,
+    "name": "Wizard",
+    "collection": "?",
+    "ability": {
+      "name": "Teleport",
+      "type": "ACTIVE_TURN",
+      "limit_type": "Uses",
+      "limit_value": 2,
+      "description": "Target any allied pawn anywhere on the board and swap positions with it.<br><br>Using this ability consumes this pawn's movement for the turn."
+
+    }
+  },
+  {
+    "id": "8",
+    "name": "Trapper",
+    "collection": "?",
+    "ability": {
+      "name": "Place trap",
+      "type": "ACTIVE",
+      "limit_type": "Uses",
+      "limit_value": "3",
+      "description": "Places a hidden trap on the tile this pawn currently occupies. When an enemy pawn enters this tile, it is immediately captured, trap disappears and Trapper gets +1 Uses.<br><br>All of this pawn's active traps disappear if the Trapper is captured or enters the base."
+    }
+  },
+{
+    "id": 9,
+    "name": "Assassin",
+    "collection": "?",
+    "ability": {
+      "name": "Backstab",
+      "type": "ACTIVE",
+      "limit_type": "Uses",
+      "limit_value": 1,
+      "description": "Can be activated when Assassin is within enemy pawn's Line of Sight and within a 3-tile range.<br><br><b>Effect:</b> Teleports this pawn directly to the first empty tile behind that enemy pawn.",
+      "cooldown": "None"
+    }
+  },
+  {
+    "id": "10",
     "name": "?",
     "collection": "?",
     "ability": {
       "name": "?",
       "type": "?",
+      "limit_type": "?",
+      "limit_value": "?",
       "description": "?"
     }
   }

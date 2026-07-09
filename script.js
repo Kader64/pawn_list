@@ -37,31 +37,17 @@ function renderPieces(pieces) {
         </span>
       </div>
 
+    ${ability.limit_type && ability.limit_value ? `
+        <div class="ability-limit">
+          <span class="label">${ability.limit_type}:</span>
+           ${ability.limit_value}
+        </div>
+      ` : ''}
+
       <div class="ability-desc">
         ${ability.description}
       </div>
-
-      <div class="meta">
-        ${
-          ability.uses !== undefined
-            ? `<span class="badge">Uses: ${ability.uses}</span>`
-            : ""
-        }
-
-        ${
-          ability.cooldown !== undefined
-            ? `<span class="badge">Cooldown: ${ability.cooldown}</span>`
-            : ""
-        }
-
-        ${
-          ability.activationCondition
-            ? `<span class="badge">Condition: ${ability.activationCondition}</span>`
-            : ""
-        }
-      </div>
     `;
-
     gallery.appendChild(card);
   });
 }
